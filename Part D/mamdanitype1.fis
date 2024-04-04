@@ -1,0 +1,97 @@
+[System]
+Name='mamdanitype1'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=45
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Delay'
+Range=[0 0.7]
+NumMFs=3
+MF1='Very short':'trapmf',[0 0 0.1 0.3]
+MF2='Short':'trimf',[0.1 0.3 0.5]
+MF3='Medium':'trapmf',[0.4 0.6 0.7 0.7]
+
+[Input2]
+Name='service'
+Range=[0 1]
+NumMFs=5
+MF1='Small':'trapmf',[0 0 0.15 0.35]
+MF2='Rarher small':'trimf',[0.15 0.3 0.45]
+MF3='Medium':'trimf',[0.3 0.5 0.7]
+MF4='Rather large':'trimf',[0.55 0.7 0.85]
+MF5='Large':'trapmf',[0.6 0.8 1 1]
+
+[Input3]
+Name='Repaur'
+Range=[0 1]
+NumMFs=3
+MF1='Low':'trapmf',[0 0 0.4 0.6]
+MF2='Medium':'trimf',[0.4 0.6 0.8]
+MF3='High':'trapmf',[0.6 0.8 1 1]
+
+[Output1]
+Name='tip'
+Range=[0 1]
+NumMFs=7
+MF1='Very small':'trapmf',[0 0 0.1 0.3]
+MF2='Small':'trimf',[0 0.2 0.4]
+MF3='Rather Small':'trimf',[0.25 0.35 0.45]
+MF4='Medium':'trimf',[0.3 0.5 0.7]
+MF5='Rather Large':'trimf',[0.55 0.65 0.75]
+MF6='Large':'trimf',[0.6 0.8 1]
+MF7='Very Large':'trapmf',[0.7 0.9 1 1]
+
+[Rules]
+1 1 1, 1 (1) : 1
+2 1 1, 1 (1) : 1
+3 1 1, 1 (1) : 1
+1 2 1, 1 (1) : 1
+2 2 1, 1 (1) : 1
+3 2 1, 1 (1) : 1
+1 3 1, 1 (1) : 1
+2 3 1, 1 (1) : 1
+3 3 1, 1 (1) : 1
+1 4 1, 2 (1) : 1
+2 4 1, 2 (1) : 1
+3 4 1, 1 (1) : 1
+1 5 1, 2 (1) : 1
+2 5 1, 2 (1) : 1
+3 5 1, 1 (1) : 1
+1 1 2, 2 (1) : 1
+2 1 2, 1 (1) : 1
+3 1 2, 1 (1) : 1
+1 2 2, 2 (1) : 1
+2 2 2, 1 (1) : 1
+3 2 2, 1 (1) : 1
+1 3 2, 3 (1) : 1
+2 3 2, 2 (1) : 1
+3 3 2, 1 (1) : 1
+1 4 2, 4 (1) : 1
+2 4 2, 3 (1) : 1
+3 4 2, 2 (1) : 1
+1 5 2, 4 (1) : 1
+2 5 2, 3 (1) : 1
+3 5 2, 2 (1) : 1
+1 1 3, 7 (1) : 1
+2 1 3, 6 (1) : 1
+3 1 3, 4 (1) : 1
+1 2 3, 7 (1) : 1
+2 2 3, 5 (1) : 1
+3 2 3, 3 (1) : 1
+1 3 3, 4 (1) : 1
+2 3 3, 4 (1) : 1
+3 3 3, 2 (1) : 1
+1 4 3, 5 (1) : 1
+2 4 3, 4 (1) : 1
+3 4 3, 3 (1) : 1
+1 5 3, 6 (1) : 1
+2 5 3, 4 (1) : 1
+3 5 3, 3 (1) : 1
